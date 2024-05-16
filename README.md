@@ -1,1 +1,1 @@
-# Kidney Disease Using Image Classification
+# Kidney Disease Prediction Using Images
