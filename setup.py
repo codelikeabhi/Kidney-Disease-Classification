@@ -6,10 +6,10 @@ with open("README.md", 'r', encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = ""
-AUTHOR_USER_NAME = ""
-SRC_REPO = ""
-AUTHOR_EMAIL = ""
+REPO_NAME = "Kidney-Disease-Classification"
+AUTHOR_USER_NAME = "codelikeabhi"
+SRC_REPO = "KidneyDiseaseClassifier"
+AUTHOR_EMAIL = "abhisriwastav7308@gmail.com"
 
 setuptools.setup(
     name= SRC_REPO,
