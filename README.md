@@ -37,3 +37,21 @@ pip install -r requirements.txt
 7. Update the main.py
 8. Update the dvc.yaml
 9. Update app.py
+
+### MLFlow
+[Documentation](https://mlflow.org/docs/latest/index.html)
+
+###### cmd
+- mlflow ui
+
+### DagsHub
+[DagsHub](https://dagshub.com)
+
+#### Run the following commands to export as env variables:
+```bash
+export MLFLOW_TRACKING_URI = https://dagshub.com/codelikeabhi/Kidney-Disease-Classification.mlflow
+
+export MLFLOW_TRACKING_USERNAME= codelikeabhi
+
+export MLFLOW_TRACKING_PASSWORD= replace_with_your_tracking_password
+```

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Projects/Artificial%20Intelligence/Kidney-Disease-Classification/mlruns/0/de12cb7f2e8d4b3f8e7af9eec9028d88/artifacts
+end_time: 1716147084116
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de12cb7f2e8d4b3f8e7af9eec9028d88
+run_name: puzzled-ape-387
+run_uuid: de12cb7f2e8d4b3f8e7af9eec9028d88
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716147058009
+status: 3
+tags: []
+user_id: abhis

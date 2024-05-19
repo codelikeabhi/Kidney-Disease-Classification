@@ -94,3 +94,156 @@
 [2024-05-19 23:30:18,236: INFO : common: Created Directory at artifacts]
 [2024-05-19 23:30:18,238: INFO : common: Created Directory at artifacts\training]
 [2024-05-19 23:31:04,292: INFO : main: >>>>>> Stage Model Training completed <<<<<]
+[2024-05-20 00:20:07,878: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:20:07,888: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:27:00,185: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:27:00,192: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:27:52,312: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:27:52,316: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:27:52,318: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:28:04,045: INFO : common: JSON file saved at: scores.json]
+[2024-05-20 00:28:11,252: WARNING : save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-20 00:28:12,084: INFO : builder_impl: Assets written to: C:\Users\abhis\AppData\Local\Temp\tmpm12_suqt\model\data\model\assets]
+[2024-05-20 00:53:51,875: INFO : main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2024-05-20 00:53:51,875: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:53:51,891: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:53:51,891: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:53:51,907: INFO : common: Created Directory at artifacts/data_ingestion]
+[2024-05-20 00:53:51,909: INFO : data_ingestion: Downloading data from https://drive.google.com/file/d/1mHAjS0aPr8U0Nc-pCpinuF8rbox3G8FO/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-20 00:54:10,114: ERROR : main: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))]
+Traceback (most recent call last):
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 1348, in getresponse
+    response.begin()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 285, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 1348, in getresponse
+    response.begin()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\http\client.py", line 285, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    data_ingestion.main()
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\pipeline\stage1_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 725, in send
+    history = [resp for resp in gen]
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 725, in <listcomp>
+    history = [resp for resp in gen]
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2024-05-20 00:54:10,172: INFO : main: **********]
+[2024-05-20 00:54:10,172: INFO : main: >>>>>>>> Stage Base Model Preparation Stage started <<<<<<<]
+[2024-05-20 00:54:10,180: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:54:10,180: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:54:10,180: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:54:10,189: INFO : common: Created Directory at artifacts/prepare_base_model]
+[2024-05-20 00:54:11,222: WARNING : saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-05-20 00:54:11,681: INFO : main: >>>>>> Stage Base Model Preparation Stage completed <<<<<]
+[2024-05-20 00:54:11,681: INFO : main: **********]
+[2024-05-20 00:54:11,681: INFO : main: >>>>>>>> Stage Model Training started <<<<<<<]
+[2024-05-20 00:54:11,681: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:54:11,700: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:54:11,702: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:54:11,702: INFO : common: Created Directory at artifacts\training]
+[2024-05-20 00:54:12,422: ERROR : main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Dataset']
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    model_trainer.main()
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\pipeline\stage3_model_training.py", line 17, in main
+    training.train_valid_generator()
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Dataset'
+[2024-05-20 00:55:06,158: INFO : main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2024-05-20 00:55:06,174: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:55:06,174: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:55:06,174: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:55:06,174: INFO : common: Created Directory at artifacts/data_ingestion]
+[2024-05-20 00:55:06,188: INFO : data_ingestion: Downloading data from https://drive.google.com/file/d/1mHAjS0aPr8U0Nc-pCpinuF8rbox3G8FO/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-20 00:55:50,572: INFO : main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2024-05-20 00:55:50,572: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:55:50,572: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:55:50,587: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:55:50,593: INFO : common: Created Directory at artifacts/data_ingestion]
+[2024-05-20 00:55:50,593: INFO : data_ingestion: Downloading data from https://drive.google.com/file/d/1mHAjS0aPr8U0Nc-pCpinuF8rbox3G8FO/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-20 00:56:17,302: INFO : data_ingestion: Downloaded data from https://drive.google.com/file/d/1mHAjS0aPr8U0Nc-pCpinuF8rbox3G8FO/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-20 00:56:18,428: INFO : main: >>>>>> Stage Data Ingestion Stage completed <<<<<<]
+[2024-05-20 00:56:18,432: INFO : main: **********]
+[2024-05-20 00:56:18,432: INFO : main: >>>>>>>> Stage Base Model Preparation Stage started <<<<<<<]
+[2024-05-20 00:56:18,437: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:56:18,441: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:56:18,441: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:56:18,441: INFO : common: Created Directory at artifacts/prepare_base_model]
+[2024-05-20 00:56:19,552: WARNING : saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-05-20 00:56:20,051: INFO : main: >>>>>> Stage Base Model Preparation Stage completed <<<<<]
+[2024-05-20 00:56:20,051: INFO : main: **********]
+[2024-05-20 00:56:20,051: INFO : main: >>>>>>>> Stage Model Training started <<<<<<<]
+[2024-05-20 00:56:20,058: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 00:56:20,064: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 00:56:20,064: INFO : common: Created Directory at artifacts]
+[2024-05-20 00:56:20,068: INFO : common: Created Directory at artifacts\training]
+[2024-05-20 01:00:45,413: INFO : main: >>>>>> Stage Model Training completed <<<<<]
+[2024-05-20 01:00:45,413: INFO : main: >>>>>> Stage Model Evaluation started <<<<<<]
+[2024-05-20 01:00:45,423: INFO : common: yaml file: config\config.yaml loaded successfully]
+[2024-05-20 01:00:45,427: INFO : common: yaml file: params.yaml loaded successfully]
+[2024-05-20 01:00:45,430: INFO : common: Created Directory at artifacts]
+[2024-05-20 01:00:57,463: INFO : common: JSON file saved at: scores.json]
+[2024-05-20 01:01:02,711: WARNING : save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-20 01:01:04,159: INFO : builder_impl: Assets written to: C:\Users\abhis\AppData\Local\Temp\tmp_qhriodc\model\data\model\assets]
+[2024-05-20 01:01:23,871: INFO : dir_util: creating C:\Projects\Artificial Intelligence\Kidney-Disease-Classification\mlruns\0\de12cb7f2e8d4b3f8e7af9eec9028d88\artifacts\model\data]
+[2024-05-20 01:01:23,871: INFO : dir_util: creating C:\Projects\Artificial Intelligence\Kidney-Disease-Classification\mlruns\0\de12cb7f2e8d4b3f8e7af9eec9028d88\artifacts\model\data\model]
+[2024-05-20 01:01:23,885: INFO : dir_util: creating C:\Projects\Artificial Intelligence\Kidney-Disease-Classification\mlruns\0\de12cb7f2e8d4b3f8e7af9eec9028d88\artifacts\model\data\model\assets]
+[2024-05-20 01:01:23,892: INFO : dir_util: creating C:\Projects\Artificial Intelligence\Kidney-Disease-Classification\mlruns\0\de12cb7f2e8d4b3f8e7af9eec9028d88\artifacts\model\data\model\variables]
+[2024-05-20 01:01:24,132: INFO : main: >>>>>> Stage Model Evaluation completed <<<<<<]
