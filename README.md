@@ -55,3 +55,9 @@ export MLFLOW_TRACKING_USERNAME= codelikeabhi
 
 export MLFLOW_TRACKING_PASSWORD= replace_with_your_tracking_password
 ```
+
+### DVC Commands
+
+1. dvc init
+2. dvc repro
+3. dvc dag
