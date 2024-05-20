@@ -286,3 +286,38 @@ FileNotFoundError: [WinError 3] The system cannot find the path specified: 'arti
 [2024-05-20 11:58:10,776: WARNING : save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
 [2024-05-20 11:58:12,179: INFO : builder_impl: Assets written to: C:\Users\abhis\AppData\Local\Temp\tmp8z61ldi9\model\data\model\assets]
 [2024-05-20 11:59:38,158: INFO : stage4_model_evaluation: >>>>>> Stage Model Evakuation completed <<<<<]
+[2024-05-20 12:23:08,321: INFO : _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.12.253:8080]
+[2024-05-20 12:23:08,321: INFO : _internal: [33mPress CTRL+C to quit[0m]
+[2024-05-20 12:23:22,916: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:23:22] "GET / HTTP/1.1" 200 -]
+[2024-05-20 12:23:40,049: ERROR : app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 35, in predictionRoute
+    result = clApp.classifier.predict()
+  File "c:\projects\artificial intelligence\kidney-disease-classification\src\KidneyDiseaseClassifier\pipeline\prediction.py", line 16, in predict
+    test_image = image.load_img(imagename, target_size = (224, 224))
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\abhis\anaconda3\envs\kidney\lib\site-packages\PIL\Image.py", line 3339, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000026001B42D60>
+[2024-05-20 12:23:40,067: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:23:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-05-20 12:23:46,592: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:23:46] "GET / HTTP/1.1" 200 -]
+[2024-05-20 12:24:11,111: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:24:11] "POST /predict HTTP/1.1" 200 -]
+[2024-05-20 12:24:21,920: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:24:21] "POST /predict HTTP/1.1" 200 -]
+[2024-05-20 12:25:52,863: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:25:52] "GET / HTTP/1.1" 200 -]
+[2024-05-20 12:25:54,393: INFO : _internal: 127.0.0.1 - - [20/May/2024 12:25:54] "GET / HTTP/1.1" 200 -]
